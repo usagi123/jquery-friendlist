@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Friends List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Friends List</h1>
+        
+        <h4>Add Friend</h4>
+        <p>Friend Name: <input type="text" id="name"></p>
+        <p>Friend Age: <input type="text" id="age"></p>
+        <button id="add-friend">Add friend</button>
+
+        <h2>Friends List</h2>
+        <ul id="friends"></ul>
+        <template id="friend-template">
+            <li data-id="{{id}}">
+                <p>
+                    <strong>Name:</strong>
+                    <span class="noedit name">{{name}}</span>
+                    <input class="edit name">
+                </p>
+                <p>
+                    <strong>Age:</strong>
+                    <span class="noedit age">{{age}}</span>
+                    <input class="edit age">
+                </p>
+                <button data-id={{id}} class='remove'>Delete</button>
+                <button class="editFriend noedit">Edit</button>
+                <button class="saveEdit edit">Save</button>
+                <button class="cancelEdit edit">Cancel</button>
+            </li>
+        </template>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    </body>
+</html>
